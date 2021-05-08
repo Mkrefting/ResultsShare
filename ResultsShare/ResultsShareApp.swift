@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct ResultsShareApp: App {
+
     @StateObject var myResults = MyResults()
     
     var body: some Scene {

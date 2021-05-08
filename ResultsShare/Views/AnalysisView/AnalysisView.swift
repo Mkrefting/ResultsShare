@@ -12,7 +12,14 @@ struct AnalysisView: View {
     @EnvironmentObject var myResults: MyResults
 
     var body: some View {
-        Text("Show result analysis here...")
+        NavigationView{
+            
+            ScrollView(.horizontal){
+                BarChart(data: myResults.getData(), labels: myResults.getLabels())
+            }.padding()
+            
+                .navigationTitle("Result Analysis")
+        }
     }
 }
 

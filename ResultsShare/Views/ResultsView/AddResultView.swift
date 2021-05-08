@@ -44,10 +44,16 @@ struct AddResultView: View {
 
                     Section{
                         // to get keyboard showing in simulator -> press cmd+k
-                        TextField("Score", text: $score)
-                            .keyboardType(.numberPad)
-                        TextField("Out Of", text: $outOf)
-                            .keyboardType(.numberPad)
+                        HStack{
+                            Section{
+                            TextField("Score", text: $score)
+                                .keyboardType(.numberPad)
+                            }
+                            Section{
+                            TextField("Out Of", text: $outOf)
+                                .keyboardType(.numberPad)
+                            }
+                        }
                     }
                     
 
